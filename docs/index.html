@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D Projects Showcase</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">SFU MPCS Cybersecurity Lab I</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">R&D Projects Showcase</h1>
+            <p class="hero-subtitle">Exploring Innovation Through Collaborative Learning</p>
+            <button class="cta-btn" onclick="scrollToSection('projects')">View Projects</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- About Instructor Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About This Course</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>This is the first lab course for students enrolled in the Cybersecurity concentration of the Professional Master's Program. The course covers three core topics: penetration testing, web security, and cloud security.</p>
+                    <p>As part of the course, studnets enrolled collaborate in groups of 3-4 to conduct thorough research and implement state-of-the-art methodologies to solve the most pressing security challenges.</p>
+                    <p>This year 8 groups of talented students worked towards developing solutions to enhance cybersecurity practices in this age of AI boom</p>
+                    <p>This portfolio is a brief introduction to all the projects and the talented students who developed these solutions. </p>
+                    <p>Each student's LinkedIn profile is available on the project page in case you would like to reach out to them, or simply know them further! </p>
+
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>8</h3>
+                        <p>Active Projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>24</h3>
+                        <p>Students Involved</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>12</h3>
+                        <p>Weeks Duration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="openProject(0)">
+                    <div class="project-icon">🚀</div>
+                    <h3>AI Chatbot System</h3>
+                    <p>An intelligent conversational AI built with NLP</p>
+                    <div class="project-meta">
+                        <span class="team-size">👥 5 Members</span>
+                        <span class="tech-stack">Python, ML</span>
+                    </div>
+                    <button class="view-btn">View Details →</button>
+                </div>
+
+                <div class="project-card" onclick="openProject(1)">
+                    <div class="project-icon">🎨</div>
+                    <h3>Design System Framework</h3>
+                    <p>Comprehensive UI component library and guidelines</p>
+                    <div class="project-meta">
+                        <span class="team-size">👥 4 Members</span>
+                        <span class="tech-stack">React, Figma</span>
+                    </div>
+                    <button class="view-btn">View Details →</button>
+                </div>
+
+                <div class="project-card" onclick="openProject(2)">
+                    <div class="project-icon">📊</div>
+                    <h3>Data Analytics Dashboard</h3>
+                    <p>Real-time data visualization and analytics platform</p>
+                    <div class="project-meta">
+                        <span class="team-size">👥 6 Members</span>
+                        <span class="tech-stack">React, D3.js</span>
+                    </div>
+                    <button class="view-btn">View Details →</button>
+                </div>
+
+                <div class="project-card" onclick="openProject(3)">
+                    <div class="project-icon">🔐</div>
+                    <h3>Blockchain Wallet</h3>
+                    <p>Secure cryptocurrency management application</p>
+                    <div class="project-meta">
+                        <span class="team-size">👥 5 Members</span>
+                        <span class="tech-stack">Web3, Solidity</span>
+                    </div>
+                    <button class="view-btn">View Details →</button>
+                </div>
+
+                <div class="project-card" onclick="openProject(4)">
+                    <div class="project-icon">🌍</div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack online shopping experience</p>
+                    <div class="project-meta">
+                        <span class="team-size">👥 7 Members</span>
+                        <span class="tech-stack">MERN Stack</span>
+                    </div>
+                    <button class="view-btn">View Details →</button>
+                </div>
+
+                <div class="project-card" onclick="openProject(5)">
+                    <div class="project-icon">🎬</div>
+                    <h3>Video Streaming App</h3>
+                    <p>Scalable multimedia streaming platform</p>
+                    <div class="project-meta">
+                        <span class="team-size">👥 6 Members</span>
+                        <span class="tech-stack">Node.js, AWS</span>
+                    </div>
+                    <button class="view-btn">View Details →</button>
+                </div>
+
+                <div class="project-card" onclick="openProject(6)">
+                    <div class="project-icon">📱</div>
+                    <h3>Mobile Fitness App</h3>
+                    <p>Cross-platform fitness tracking application</p>
+                    <div class="project-meta">
+                        <span class="team-size">👥 5 Members</span>
+                        <span class="tech-stack">Flutter, Firebase</span>
+                    </div>
+                    <button class="view-btn">View Details →</button>
+                </div>
+
+                <div class="project-card" onclick="openProject(7)">
+                    <div class="project-icon">🔬</div>
+                    <h3>IoT Smart Home</h3>
+                    <p>Connected smart home automation system</p>
+                    <div class="project-meta">
+                        <span class="team-size">👥 4 Members</span>
+                        <span class="tech-stack">Arduino, Python</span>
+                    </div>
+                    <button class="view-btn">View Details →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="icon">🎓</span>
+                        <p>Instructor: Mohammad Tayebi</p>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📧</span>
+                        <p>Email: tayebi@sfu.ca</p>
+                    </div>
+                   
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <p>Location: 8888 University Dr W, Burnaby, BC V5A 1S6</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 CMPT 782 Lab I. All rights reserved.</p>
+            
+        </div>
+    </footer>
+
+
+    <script src="js/projects.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
