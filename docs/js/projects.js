@@ -4,80 +4,10 @@
 const projectsData = [
   {
     id: 0,
-    name: "Electronic Messaging Insights",
-    description:
-      "A system that leverages LLM agents to interpret electronic messages and notify recipients of true intent and recommended action.",
-    icon: "🌐",
-    overview:
-      "A system leverages LLM agents to deconstruct and interpret electronic messages, determine their intended effect, and notify the recipient about the true intent and recommended action. This system contains client plugins (Outlook, Chrome, etc.) that collect message content, and a backend server processes and interprets messages using LLM agents.",
-    techs: [],
-    features: [
-      "Responsive user interface",
-      "RESTful API implementation",
-      "Database design and optimization",
-      "Real-time data updates",
-      "Mobile-first approach",
-    ],
-    projectPdf: "groups/group1/group 1.pdf",
-    team: [
-      {
-        name: "Calvin",
-        role: "Frontend Developer",
-        avatar: "👨‍💻",
-        cv: "groups/group1/Calvin - Calvin Zhang.pdf",
-      },
-      {
-        name: "Dean",
-        role: "Backend Developer",
-        avatar: "👨‍💻",
-        cv: "groups/group1/Dean - Calvin Zhang.pdf",
-      },
-      {
-        name: "Shakthi Vel",
-        role: "Full Stack Developer",
-        avatar: "👨‍💻",
-        cv: "groups/group1/SHAKTHI VEL - Calvin Zhang.pdf",
-      },
-    ],
-  },
-  {
-    id: 1,
-    name: "Nighthawk: AI/LLM Implementation Security Scanner",
-    description:
-      "NightHawk is an open-source security analysis tool focused on AI and LLM application risks.",
-    icon: "🦅",
-    overview:
-      "NightHawk is an open-source security analysis tool designed for applications that use artificial intelligence and large language models. Built as a Python command-line utility, NightHawk scans local projects and GitHub repositories to uncover and explain security risks that are unique to AI-driven software. By combining rule-based scanning with LLM-assisted reasoning, NightHawk identifies issues such as prompt injection, unsafe tool invocation, secret and token exposure, and risky data flows. The tool maps how models, prompts, and sensitive information are being used in an application, providing clear, actionable reports in both structured JSON and readable Markdown formats. Each report highlights the affected files, describes realistic exploit scenarios, and offers practical guidance for remediation. NightHawk stands out from generic code scanners by focusing on the specific challenges of AI integration, delivering context-rich findings that help developers and security teams address vulnerabilities quickly and confidently. Its extensible design and straightforward workflow make it an essential resource for anyone building or reviewing software that interacts with AI services.",
-    techs: [],
-    features: [
-      "Advanced data visualization",
-      "Custom report generation",
-      "Real-time analytics dashboard",
-      "Data export functionality",
-      "User authentication and permissions",
-    ],
-    projectPdf: "groups/group2/group 2.pdf",
-    team: [
-      {
-        name: "Rana Fahad Aman",
-        role: "Data Engineer",
-        avatar: "👨‍💼",
-        cv: "groups/group2/Rana Fahad Aman - Resume (2025) - Sanjit Mann.pdf",
-      },
-      {
-        name: "Sanjit Mann",
-        role: "Full Stack Developer",
-        avatar: "👨‍💻",
-        cv: "groups/group2/Sanjit Mann - Resume (2025) - Sanjit Mann.pdf",
-      },
-    ],
-  },
-  {
-    id: 2,
     name: "Agentic AI for DNS-based Threat Intelligence",
     description:
       "AI-powered system that collects and links information about suspicious domains to support threat intelligence.",
-    icon: "📡",
+    icon: "",
     overview:
       "Our project builds an AI-powered system that automatically collects and connects information about suspicious domains. It analyzes public data to find links between cyber campaigns and produces clear summaries to help analysts understand who may be behind attacks. The goal is faster, smarter threat intelligence that helps organizations act before the next attack begins.",
     techs: [
@@ -119,11 +49,11 @@ const projectsData = [
     ],
   },
   {
-    id: 3,
+    id: 1,
     name: "AI Battle Bots with MCP",
     description:
       "An autonomous, MCP-connected LLM agent for penetration testing and attack automation.",
-    icon: "🤖",
+    icon: "",
     overview:
       "This project features an autonomous, LLM-driven penetration-testing agent that integrates large language models with the Model Context Protocol (MCP) to scan a target, plan relevant attack chains, and execute the attacks on the target. The agent utilizes an MCP server to connect a Kali Linux virtual machine to execute the attack as well as Redstack Vault MCP to pull open-source attack chains and needed commands. The agent currently utilizes Grok-4 but can be configured to query other models. Finally, the agent stores all attacks, its results, and relevant information in a database to allow for revision and future learning for both people and LLMs.",
     techs: [],
@@ -156,12 +86,12 @@ const projectsData = [
       },
     ],
   },
-  {
-    id: 4,
+   {
+    id: 2,
     name: "YankIt: Leveraging LLM Judgement for Malicious Domain Detection",
     description:
       "An end-to-end system using LLMs to detect phishing webpages by comparing suspicious pages to legitimate domains.",
-    icon: "🎯",
+    icon: "",
     overview:
       "This project focuses on building a practical, end-to-end software system that leverages large language models (LLMs) and an 'LLM as a Judge' framework to detect phishing webpages against legitimate ones. The system analyzes suspicious webpage content and structure, cross-checks it against the actual domain, and flags sites that imitate original brands as phishing.",
     techs: [
@@ -196,12 +126,48 @@ const projectsData = [
       },
     ],
   },
-  {
-    id: 5,
+    {
+    id: 3,
+    name: "AI Driven Threat Modeling",
+    description:
+      "Al-driven, STRIDE-based threat modeling tool designed to automate and enhance the cybersecurity threat modeling process.",
+    icon: "",
+    overview:
+      "MCP Security Framework is a security testing framework for Model Context Protocol (MCP) servers. It automates security assessments by connecting to MCP servers via SSE or stdio, running detectors, and generating reports in JSON, SARIF, and HTML. The framework includes a web interface for viewing assessment results.",
+    techs: [
+      
+    ],
+    features: [
+      
+    ],
+    projectPdf: "groups/group6/group6.pdf",
+    team: [
+      {
+        name: "Oliver",
+        role: "ML Engineer",
+        avatar: "👨‍💼",
+        cv: "groups/group6/Joshua_Chen_Resume_Cybersecurity.docx (2) - Joshua Chen.pdf",
+      },
+      {
+        name: "Sebastian ",
+        role: "Data Scientist",
+        avatar: "👨‍🔬",
+        cv: "groups/group6/Tanish_Rathore_CV - Joshua Chen.pdf",
+      },
+      {
+        name: "Lubo",
+        role: "ML Researcher",
+        avatar: "👩‍🔬",
+        cv: "groups/group6/YAOTING WANG_Resume - Joshua Chen.pdf",
+      },
+    ],
+  },
+   {
+    id: 4,
     name: "MCP Security Framework",
     description:
       "A security testing framework for Model Context Protocol (MCP) servers.",
-    icon: "🛡️",
+    icon: "",
     overview:
       "MCP Security Framework is a security testing framework for Model Context Protocol (MCP) servers. It automates security assessments by connecting to MCP servers via SSE or stdio, running detectors, and generating reports in JSON, SARIF, and HTML. The framework includes a web interface for viewing assessment results.",
     techs: [
@@ -237,48 +203,11 @@ const projectsData = [
     ],
   },
   {
-    id: 6,
-    name: "AI Driven Threat Modeling",
-    description:
-      "Al-driven, STRIDE-based threat modeling tool designed to automate and enhance the cybersecurity threat modeling process.",
-    icon: "🕵️",
-    overview:
-      "MCP Security Framework is a security testing framework for Model Context Protocol (MCP) servers. It automates security assessments by connecting to MCP servers via SSE or stdio, running detectors, and generating reports in JSON, SARIF, and HTML. The framework includes a web interface for viewing assessment results.",
-    techs: [
-      
-    ],
-    features: [
-      
-    ],
-    projectPdf: "groups/group6/group6.pdf",
-    team: [
-      {
-        name: "Oliver",
-        role: "ML Engineer",
-        avatar: "👨‍💼",
-        cv: "groups/group6/Joshua_Chen_Resume_Cybersecurity.docx (2) - Joshua Chen.pdf",
-      },
-      {
-        name: "Sebastian ",
-        role: "Data Scientist",
-        avatar: "👨‍🔬",
-        cv: "groups/group6/Tanish_Rathore_CV - Joshua Chen.pdf",
-      },
-      {
-        name: "Lubo",
-        role: "ML Researcher",
-        avatar: "👩‍🔬",
-        cv: "groups/group6/YAOTING WANG_Resume - Joshua Chen.pdf",
-      },
-    ],
-  },
-
-  {
-    id: 7,
+    id: 5,
     name: "Golden Repository for AI Benchmark",
     description:
       "AI-assisted repository documenting high/critical CVEs with containerized POCs and exploit scripts.",
-    icon: "📚",
+    icon: "",
     overview:
       "We developed an AI-assisted tool to collect and document important, famous, and recent high-to-critical CVEs, with exploitable Docker containerized proof-of-concepts and exploit scripts. We documented the technical details and context of CVEs and the methods for exploiting or patching them, and verified exploitations and patches for multiple CVEs with the help of AI agents.",
     techs: [],
@@ -310,6 +239,85 @@ const projectsData = [
       },
     ],
   },
+  {
+    id: 6,
+    name: "Electronic Messaging Insights",
+    mentor: "Mentor",
+    mentor_linedin: "linkedIn",
+    description:
+      "A system that leverages LLM agents to interpret electronic messages and notify recipients of true intent and recommended action.",
+    icon: "",
+    overview:
+      "A system leverages LLM agents to deconstruct and interpret electronic messages, determine their intended effect, and notify the recipient about the true intent and recommended action. This system contains client plugins (Outlook, Chrome, etc.) that collect message content, and a backend server processes and interprets messages using LLM agents.",
+    techs: [],
+    features: [
+      "Responsive user interface",
+      "RESTful API implementation",
+      "Database design and optimization",
+      "Real-time data updates",
+      "Mobile-first approach",
+    ],
+    projectPdf: "groups/group1/group 1.pdf",
+    team: [
+      {
+        name: "Calvin",
+        role: "Frontend Developer",
+        avatar: "👨‍💻",
+        cv: "groups/group1/Calvin - Calvin Zhang.pdf",
+      },
+      {
+        name: "Dean",
+        role: "Backend Developer",
+        avatar: "👨‍💻",
+        cv: "groups/group1/Dean - Calvin Zhang.pdf",
+      },
+      {
+        name: "Shakthi Vel",
+        role: "Full Stack Developer",
+        avatar: "👨‍💻",
+        cv: "groups/group1/SHAKTHI VEL - Calvin Zhang.pdf",
+      },
+    ],
+  },
+  {
+    id: 7,
+    name: "Nighthawk: AI/LLM Implementation Security Scanner",
+    description:
+      "NightHawk is an open-source security analysis tool focused on AI and LLM application risks.",
+    icon: "",
+    overview:
+      "NightHawk is an open-source security analysis tool designed for applications that use artificial intelligence and large language models. Built as a Python command-line utility, NightHawk scans local projects and GitHub repositories to uncover and explain security risks that are unique to AI-driven software. By combining rule-based scanning with LLM-assisted reasoning, NightHawk identifies issues such as prompt injection, unsafe tool invocation, secret and token exposure, and risky data flows. The tool maps how models, prompts, and sensitive information are being used in an application, providing clear, actionable reports in both structured JSON and readable Markdown formats. Each report highlights the affected files, describes realistic exploit scenarios, and offers practical guidance for remediation. NightHawk stands out from generic code scanners by focusing on the specific challenges of AI integration, delivering context-rich findings that help developers and security teams address vulnerabilities quickly and confidently. Its extensible design and straightforward workflow make it an essential resource for anyone building or reviewing software that interacts with AI services.",
+    techs: [],
+    features: [
+      "Advanced data visualization",
+      "Custom report generation",
+      "Real-time analytics dashboard",
+      "Data export functionality",
+      "User authentication and permissions",
+    ],
+    projectPdf: "groups/group2/group 2.pdf",
+    team: [
+      {
+        name: "Rana Fahad Aman",
+        role: "Data Engineer",
+        avatar: "👨‍💼",
+        cv: "groups/group2/Rana Fahad Aman - Resume (2025) - Sanjit Mann.pdf",
+      },
+      {
+        name: "Sanjit Mann",
+        role: "Full Stack Developer",
+        avatar: "👨‍💻",
+        cv: "groups/group2/Sanjit Mann - Resume (2025) - Sanjit Mann.pdf",
+      },
+    ],
+  },
+  
+  
+ 
+ 
+
+
+  
 ];
 
 // Body scroll lock helpers to prevent page jump when modals open
@@ -342,8 +350,7 @@ function generateProjectsGrid() {
     const teamCount = Array.isArray(p.team) ? p.team.length : 0;
     const techs = Array.isArray(p.techs) ? p.techs.slice(0, 2).join(", ") : "";
 
-    card.innerHTML = `
-            <div class="project-icon">${p.icon || "📁"}</div>
+    card.innerHTML = `           
             <h3>${p.name}</h3>
             <p>${p.description || ""}</p>
             <div class="project-meta">
