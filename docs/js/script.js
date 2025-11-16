@@ -32,33 +32,6 @@ function scrollToSection(sectionId) {
 }
 
 // ========================================
-// PARALLAX EFFECT ON SCROLL - ENHANCED
-// ========================================
-window.addEventListener("scroll", () => {
-  const parallaxElements = document.querySelectorAll(
-    ".hero-background, .hero::before, .hero::after"
-  );
-  const scrollPosition = window.pageYOffset;
-
-  parallaxElements.forEach((element) => {
-    const speed = element.dataset.speed || 0.5;
-    element.style.transform = `translateY(${scrollPosition * speed}px)`;
-  });
-
-  // Update navbar appearance on scroll
-  const navbar = document.querySelector(".navbar");
-  if (scrollPosition > 50) {
-    navbar.style.boxShadow = "0 12px 40px rgba(99, 102, 241, 0.25)";
-    navbar.style.background = "rgba(255, 255, 255, 0.95)";
-    navbar.style.backdropFilter = "blur(25px)";
-  } else {
-    navbar.style.boxShadow = "0 8px 32px rgba(99, 102, 241, 0.15)";
-    navbar.style.background = "rgba(255, 255, 255, 0.85)";
-    navbar.style.backdropFilter = "blur(20px)";
-  }
-});
-
-// ========================================
 // CONTACT FORM HANDLING
 // ========================================
 const contactForm = document.getElementById("contactForm");
@@ -87,7 +60,6 @@ if (contactForm) {
                 border-radius: 8px;
                 box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
                 z-index: 2000;
-                animation: slideInRight 0.5s ease;
             `;
       successMsg.textContent = "✓ Message sent successfully!";
       document.body.appendChild(successMsg);
@@ -112,7 +84,6 @@ if (contactForm) {
                 border-radius: 8px;
                 box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
                 z-index: 2000;
-                animation: slideInRight 0.5s ease;
             `;
       errorMsg.textContent = "✗ Please fill in all fields!";
       document.body.appendChild(errorMsg);
@@ -126,18 +97,11 @@ if (contactForm) {
 }
 
 // ========================================
-// SCROLL REVEAL ANIMATIONS - MULTI-DIRECTIONAL
+// SCROLL REVEAL ANIMATIONS - SIMPLIFIED
 // ========================================
 const revealElements = document.querySelectorAll(
   ".feature-card, .team-card, .stat-card"
 );
-const directions = [
-  "slideUpSmooth",
-  "slideDownSmooth",
-  "slideLeftSmooth",
-  "slideRightSmooth",
-  "slideUpRotate",
-];
 
 const observerOptions = {
   threshold: 0.15,
@@ -145,15 +109,9 @@ const observerOptions = {
 };
 
 const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      const randomDirection =
-        directions[Math.floor(Math.random() * directions.length)];
-      const delay = (index % 3) * 0.15;
-
-      entry.target.style.animation = `${randomDirection} 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}s forwards`;
-      entry.target.style.opacity = "0";
-
+      entry.target.style.opacity = "1";
       revealObserver.unobserve(entry.target);
     }
   });
@@ -164,18 +122,15 @@ revealElements.forEach((element) => {
 });
 
 // ========================================
-// ABOUT SECTION TEXT REVEAL
+// ABOUT SECTION TEXT REVEAL (Simplified)
 // ========================================
 const aboutTexts = document.querySelectorAll(".about-text p");
 
 const textObserver = new IntersectionObserver(
   (entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.style.animation = `slideLeftSmooth 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) ${
-          index * 0.2
-        }s forwards`;
-        entry.target.style.opacity = "0";
+        entry.target.style.opacity = "1";
         textObserver.unobserve(entry.target);
       }
     });
@@ -191,48 +146,28 @@ aboutTexts.forEach((text) => {
 });
 
 // ========================================
-// ADD CUSTOM ANIMATIONS ON LOAD
+// LOAD - MAKE EVERYTHING VISIBLE
 // ========================================
 window.addEventListener("load", () => {
-  // Add animation to hero content
   const heroContent = document.querySelector(".hero-content");
   if (heroContent) {
-    heroContent.style.animation =
-      "slideUpSmooth 1s cubic-bezier(0.34, 1.56, 0.64, 1)";
+    heroContent.style.opacity = "1";
   }
 
-  // Add staggered animation to nav links
-  navLinks.forEach((link, index) => {
-    link.style.opacity = "0";
-    link.style.animation = `slideDownSmooth 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) ${
-      index * 0.1
-    }s forwards`;
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    link.style.opacity = "1";
   });
 
-  // Animate hero title with smooth tilt
   const heroTitle = document.querySelector(".hero-title");
   if (heroTitle) {
-    heroTitle.style.animation =
-      "slideLeftSmooth 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), tilt 6s ease-in-out 0.8s infinite";
+    heroTitle.style.opacity = "1";
   }
 
-  // Animate hero subtitle
   const heroSubtitle = document.querySelector(".hero-subtitle");
   if (heroSubtitle) {
-    heroSubtitle.style.animation =
-      "slideRightSmooth 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s backwards";
+    heroSubtitle.style.opacity = "1";
   }
-});
-
-// ========================================
-// PARALLAX EFFECT ON SCROLL
-// ========================================
-window.addEventListener("scroll", () => {
-  const parallaxElements = document.querySelectorAll(".hero-background");
-  parallaxElements.forEach((element) => {
-    const scrollPosition = window.pageYOffset;
-    element.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-  });
 });
 
 // ========================================
@@ -245,34 +180,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ========================================
-// UTILITY FUNCTION: ADD ACTIVE CLASS STYLE
-// ========================================
-const style = document.createElement("style");
-style.textContent = `
-    @keyframes slideInRight {
-        from {
-            opacity: 0;
-            transform: translateX(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .nav-link.active {
-        color: #6366f1;
-        font-weight: 600;
-    }
-
-    .nav-link.active::after {
-        width: 100%;
-    }
-`;
-document.head.appendChild(style);
-
-// ========================================
-// PROJECT CARD INTERACTIONS & 3D TILT
+// PROJECT CARD INTERACTIONS (NO 3D EFFECTS)
 // ========================================
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".project-card");
@@ -298,9 +206,9 @@ document.addEventListener("DOMContentLoaded", () => {
     card.dataset.index = idx;
     card.style.cursor = "pointer";
 
-    // Attach click on entire card (fallback for buttons)
+    // Attach click on entire card
     card.addEventListener("click", (e) => {
-      
+      // Your click handler here
     });
 
     // Attach button click if present
@@ -308,116 +216,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btn) {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
-        
+        // Your button click handler here
       });
     }
-
-    // 3D tilt based on mouse position
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const rx = ((y - cy) / cy) * -8; // rotateX
-      const ry = ((x - cx) / cx) * 8; // rotateY
-      card.style.transform = `perspective(1000px) translateZ(6px) rotateX(${rx}deg) rotateY(${ry}deg) scale(1.01)`;
-      card.style.boxShadow = "0 30px 60px rgba(15,23,42,0.16)";
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "";
-      card.style.boxShadow = "";
-    });
   });
-});
-
-// ========================================
-// VEDANT HEGDE STYLE - CURSOR PARTICLE TRAIL
-// ========================================
-const particles = [];
-
-class Particle {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-    this.size = Math.random() * 3 + 2;
-    this.speedX = (Math.random() - 0.5) * 4;
-    this.speedY = Math.random() * -3 - 2;
-    this.opacity = 1;
-    this.color = `hsla(${Math.random() * 60 + 240}, 100%, 60%, ${
-      this.opacity
-    })`;
-  }
-
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    this.speedY += 0.1; // gravity
-    this.opacity -= 0.02;
-    this.size *= 0.98;
-  }
-
-  draw(ctx) {
-    ctx.fillStyle = `hsla(${Math.random() * 60 + 240}, 100%, 60%, ${
-      this.opacity
-    })`;
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
-}
-
-// Create canvas for particle effect
-const canvas = document.createElement("canvas");
-canvas.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 999;
-`;
-document.body.appendChild(canvas);
-
-const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-// Update canvas on resize
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-
-// Create particles on mouse move
-document.addEventListener("mousemove", (e) => {
-  if (Math.random() > 0.7) {
-    particles.push(new Particle(e.clientX, e.clientY));
-  }
-});
-
-// Animation loop for particles
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (let i = particles.length - 1; i >= 0; i--) {
-    particles[i].update();
-    particles[i].draw(ctx);
-
-    if (particles[i].opacity <= 0) {
-      particles.splice(i, 1);
-    }
-  }
-
-  if (particles.length > 0) {
-    requestAnimationFrame(animateParticles);
-  }
-}
-
-document.addEventListener("mousemove", () => {
-  if (particles.length > 0) {
-    animateParticles();
-  }
 });
 
 // ========================================
@@ -774,11 +576,13 @@ function closeCV() {
 // Close modal on outside click
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("cvModal");
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      closeCV();
-    }
-  });
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeCV();
+      }
+    });
+  }
 });
 
 // Close modal on Escape key
@@ -786,30 +590,4 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeCV();
   }
-});
-
-// ========================================
-// INTERACTIVE GLOW BACKGROUND EFFECT
-// ========================================
-const glowCanvas = document.createElement("div");
-glowCanvas.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-    opacity: 0.3;
-`;
-document.body.appendChild(glowCanvas);
-
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
-
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-
-  glowCanvas.style.background = `radial-gradient(600px at ${mouseX}px ${mouseY}px, rgba(99, 102, 241, 0.1), transparent 80%)`;
 });
