@@ -281,6 +281,95 @@ body {
 }
 
 /* ========================================
+   EVENT INFO SECTION (Below Hero)
+   ======================================== */
+.event-info {
+  background: linear-gradient(135deg, rgba(204, 6, 51, 0.05), rgba(166, 0, 40, 0.03));
+  padding: 20px 40px;
+  margin-top: 40px;
+  border-top: 2px solid rgba(204, 6, 51, 0.2);
+  border-bottom: 2px solid rgba(204, 6, 51, 0.2);
+  width: 100%;
+}
+
+.event-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.event-icon {
+  font-size: 1.8rem;
+}
+
+.event-details h3 {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin: 0 0 5px 0;
+  font-weight: 700;
+}
+
+.event-details p {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.zoom-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(204, 6, 51, 0.3);
+  white-space: nowrap;
+}
+
+.zoom-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(204, 6, 51, 0.4);
+  color: white;
+}
+
+.zoom-icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .event-inline {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .event-text {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .event-info {
+    padding: 15px 20px;
+  }
+}
+
+/* ========================================
    SECTIONS
    ======================================== */
 section {
