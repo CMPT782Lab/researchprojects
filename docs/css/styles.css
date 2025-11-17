@@ -223,7 +223,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.0rem !important;
+  font-size: 0.8rem !important;
   color: var(--text-light);
   margin-bottom: 20px;
   font-weight: 400;
