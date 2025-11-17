@@ -128,9 +128,9 @@ const projectsData = [
   },
     {
     id: 3,
-    name: "AI Driven Threat Modeling",
+    name: "AI-Driven Threat Modeling",
     description:
-      "Al-driven, STRIDE-based threat modeling tool designed to automate and enhance the cybersecurity threat modeling process.",
+      "Al-Driven, STRIDE-based threat modeling tool designed to automate and enhance the cybersecurity threat modeling process.",
     icon: "",
     overview:
       "MCP Security Framework is a security testing framework for Model Context Protocol (MCP) servers. It automates security assessments by connecting to MCP servers via SSE or stdio, running detectors, and generating reports in JSON, SARIF, and HTML. The framework includes a web interface for viewing assessment results.",

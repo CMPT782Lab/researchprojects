@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -176,6 +177,8 @@ body {
   justify-content: center;
   overflow: hidden;
   background: #ffffff;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .hero-background {
@@ -191,6 +194,8 @@ body {
 .hero-content {
   text-align: center;
   z-index: 10;
+  padding: 0 20px !important;
+  margin: 0 !important;
 }
 
 .hero-title {
@@ -218,7 +223,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   color: var(--text-light);
   margin-bottom: 20px;
   font-weight: 400;
@@ -353,7 +358,13 @@ body {
    SECTIONS
    ======================================== */
 section {
-  padding: 80px 0;
+  padding: 20px 0 !important;
+  scroll-margin-top: 10px;
+}
+
+section.hero {
+  padding: 0 !important;
+  scroll-margin-top: 0;
 }
 
 .section-title {
@@ -1498,5 +1509,3 @@ a, a:hover, a:visited, a:active {
     font-size: 2rem;
   }
 }
-
-
