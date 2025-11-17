@@ -223,7 +223,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.0rem;
+  font-size: 0.7rem !important;
   color: var(--text-light);
   margin-bottom: 20px;
   font-weight: 400;
@@ -358,7 +358,7 @@ body {
    SECTIONS
    ======================================== */
 section {
-  padding: 20px 0 !important;
+  padding: 40px 0 !important;
   scroll-margin-top: 10px;
 }
 
@@ -1437,7 +1437,7 @@ a, a:hover, a:visited, a:active {
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
   }
 
   .section-title {
