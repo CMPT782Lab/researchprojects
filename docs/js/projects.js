@@ -88,7 +88,7 @@ const projectsData = [
   },
    {
     id: 2,
-    name: "YankIt: Leveraging LLM Judgement for Malicious Domain Detection",
+    name: "YankIt: Leveraging LLM Judgement for Malicious Website Detection",
     description:
       "An end-to-end system using LLMs to detect phishing webpages by comparing suspicious pages to legitimate domains.",
     icon: "",
@@ -281,7 +281,7 @@ const projectsData = [
   },
   {
     id: 7,
-    name: "Nighthawk: AI/LLM Implementation Security Scanner",
+    name: "Nighthawk: Security Scanning for LLM-Integrated Applications",
     description:
       "NightHawk is an open-source security analysis tool focused on AI and LLM application risks.",
     icon: "",
