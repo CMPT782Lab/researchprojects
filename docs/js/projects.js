@@ -4,6 +4,44 @@
 const projectsData = [
   {
     id: 0,
+    name: "AI Battle Bots with MCP",
+    description:
+      "An autonomous, MCP-connected LLM agent for penetration testing and attack automation.",
+    icon: "",
+    overview:
+      "This project features an autonomous, LLM-driven penetration-testing agent that integrates large language models with the Model Context Protocol (MCP) to scan a target, plan relevant attack chains, and execute the attacks on the target. The agent utilizes an MCP server to connect a Kali Linux virtual machine to execute the attack as well as Redstack Vault MCP to pull open-source attack chains and needed commands. The agent currently utilizes Grok-4 but can be configured to query other models. Finally, the agent stores all attacks, its results, and relevant information in a database to allow for revision and future learning for both people and LLMs.",
+    techs: [],
+    features: [
+      "Automated deployment pipeline",
+      "Container orchestration",
+      "Infrastructure as Code",
+      "Monitoring and logging",
+      "Disaster recovery",
+    ],
+    projectPdf: "groups/group4/group4.pdf",
+    team: [
+      {
+        name: "Alyssa Rusk",
+        role: "DevOps Engineer",
+        avatar: "👩‍💼",
+        cv: "groups/group4/ARuskCV - Alyssa Rusk.pdf",
+      },
+      {
+        name: "Nina Qiu",
+        role: "Cloud Architect",
+        avatar: "👩‍💼",
+        cv: "groups/group4/Resume_NinaQiu - Alyssa Rusk.pdf",
+      },
+      {
+        name: "Wania Imran",
+        role: "Infrastructure Engineer",
+        avatar: "👩‍💼",
+        cv: "groups/group4/WaniaImran_Resume_Website.pdf - Alyssa Rusk.pdf",
+      },
+    ],
+  },
+  {
+    id: 1,
     name: "Agentic AI for DNS-based Threat Intelligence",
     description:
       "AI-powered system that collects and links information about suspicious domains to support threat intelligence.",
@@ -48,44 +86,7 @@ const projectsData = [
       },
     ],
   },
-  {
-    id: 1,
-    name: "AI Battle Bots with MCP",
-    description:
-      "An autonomous, MCP-connected LLM agent for penetration testing and attack automation.",
-    icon: "",
-    overview:
-      "This project features an autonomous, LLM-driven penetration-testing agent that integrates large language models with the Model Context Protocol (MCP) to scan a target, plan relevant attack chains, and execute the attacks on the target. The agent utilizes an MCP server to connect a Kali Linux virtual machine to execute the attack as well as Redstack Vault MCP to pull open-source attack chains and needed commands. The agent currently utilizes Grok-4 but can be configured to query other models. Finally, the agent stores all attacks, its results, and relevant information in a database to allow for revision and future learning for both people and LLMs.",
-    techs: [],
-    features: [
-      "Automated deployment pipeline",
-      "Container orchestration",
-      "Infrastructure as Code",
-      "Monitoring and logging",
-      "Disaster recovery",
-    ],
-    projectPdf: "groups/group4/group4.pdf",
-    team: [
-      {
-        name: "Alyssa Rusk",
-        role: "DevOps Engineer",
-        avatar: "👩‍💼",
-        cv: "groups/group4/ARuskCV - Alyssa Rusk.pdf",
-      },
-      {
-        name: "Nina Qiu",
-        role: "Cloud Architect",
-        avatar: "👩‍💼",
-        cv: "groups/group4/Resume_NinaQiu - Alyssa Rusk.pdf",
-      },
-      {
-        name: "Wania Imran",
-        role: "Infrastructure Engineer",
-        avatar: "👩‍💼",
-        cv: "groups/group4/WaniaImran_Resume_Website.pdf - Alyssa Rusk.pdf",
-      },
-    ],
-  },
+  
    {
     id: 2,
     name: "YankIt: Leveraging LLM Judgement for Malicious Website Detection",
